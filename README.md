@@ -13,5 +13,22 @@ The method numberOfStationWithLetterAvg clears the ArrayList matching. Then, it 
 
 The method toString turns the ArrayList matching into an array. Then, a copy of match is made called matchString. This is then turned to String and formatted and creates the String to be outputted, listing all the matching stations.
 # MesoInherit.java
-# MesoStation.java
+This class extends MesoAbstract and finds the letter averages for the MesoStation.
+
+The constructor takes in a MesoStation Staion and stores its Station ID and each letter. It then finds the average int value for all of the characters, and finds the ceiling value, which would round up the average value, and the floor value, which rounds down the average value to the nearest integer. If the decimal portion of the average is greater than .75, the mid value is equal to the ceiling; otherwise, it is equal to the floor. The ceiling, floor, and mid value are then stored in the array avg.
+
+The method calAverage returns the array avg.
+
+The method letterAverage returns the character equivalent to the integer representation mid.
 # PosAvg.java
+This class finds the MesoStations before and after the given MesoStation so that they can be returned in a String. 
+
+The constructor takes in and saves a Station ID.
+
+The method indexOfStation calls on readFile if the ArrayList codes is empty. It then stores the index of the ID plus 1 and returns this value.
+
+The method readFile reads through the Mesonet file and uses BufferedReader to read through it by line. The Station Id is then pulled from the line and stored in the ArrayList codes.
+
+The method toString overides toString and returns the Strings that have the index of the average and the two StationIDs, if present, that come before and after the StationID.
+
+The method getCodes calls on readFile if codes is empty and returns codes. This is there so the list can be accessed by other classes.
